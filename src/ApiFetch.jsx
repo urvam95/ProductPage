@@ -3,20 +3,23 @@ import { useEffect, useState } from "react"
 function ApiFetch() {
     const [result, setResult] = useState([]);
     const [loading, setLoading] = useState(false);
+
     
     useEffect(() => {
+        const abortController = new AbortController();
         async function getApi() {
             setLoading(true);
             const res = await fetch('https://dummyjson.com/products/1');
             const data = await res.json();
             setResult(data);
             setLoading(false);
-           
-
-            
         }
         getApi();
-    }, [])
+        return () => {
+            abortController.abort();
+       }
+     
+    }, [setResult])
     console.log(result);
     const { id, brand, description, price, rating, thumbnail } = result;
 
@@ -40,10 +43,12 @@ function ApiFetch() {
                 {result && description }
                 </ul>
                 <ul>
+                    $
 
                 {result && price  }
                 </ul>
                 <ul>
+                    ⭐️
 
                 {result && rating  }
                 </ul>
