@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #f23598;
   color: white;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .logo {
@@ -24,41 +24,74 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  background-color: #a835f2; /* Purple background color */
+  height: 10vh;
+ /* Purple background color */
   margin: 0;
 }
 
-/* White circular background for the logo */
-.logo-circle {
-  background-color: white;
-  border-radius: 50%;
-  width: 200px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for the logo image */
-.logo-image {
-  width: 120px;
-  height: auto;
-}
 
 .nav-links {
+
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+
 }
+
+.nav-links button{
+    width: 48px;
+   height: 48px;
+}
+
 
 .nav-links li a {
-  color: rgb(255, 255, 255);
+  
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1rem;
+  font-family: proxima-nova, sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration:wavy;
+  font-size: 17px;
+  font-style:normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 25px;
+  
 }
 
-.nav-links li a:hover {
-  text-decoration: underline;
+
+.nav-links li a:hover .dropdown:hover .dropbtn{
+ 
+  background-color: #a835f2;
+}
+.dropdown li {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: #f23598;
+  background-color: #f23598;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(151, 52, 52, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #a835f2;
+  background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

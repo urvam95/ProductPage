@@ -2,6 +2,9 @@ import { useContext } from "react"
 
 import APIContext from "../Context/ApiFetchContext"
 import "./ProductDetail.css"
+import { Breadcrumb } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css';
+import ProductImageGallery from "./ProductImageGallery";
 
 function Products() {
     const { product, loading,error } = useContext(APIContext);
@@ -9,6 +12,25 @@ function Products() {
     if (error) return <div>error</div>
     console.log(product);
     return (
+        <>
+             <div  style={{ display: 'block',  
+                  width: 700, padding: 30, color: "#38a711" ,}}>
+
+            
+            <Breadcrumb className="active">
+                <Breadcrumb.Item href="#">
+                    Home
+                </Breadcrumb.Item>
+                <Breadcrumb.Item href="#">
+                    Eyes
+                </Breadcrumb.Item>
+                <Breadcrumb.Item href="#">
+                    Essence Mascara Lash Princess
+                </Breadcrumb.Item>
+
+                </Breadcrumb>
+                </div>
+       
         <div className="product-detail">
            
             {product ? (   
@@ -19,15 +41,16 @@ function Products() {
                    
                 </div>
             ) : <div> no</div>}
-            {product && <div className="product-images">
-                <img src={product.thumbnail} />
-                 <div className="add-to-cart" >
+            {product && 
+                    <div  >
+                        <ProductImageGallery/>
                     <button className="add-to-cart">Add to cart</button>
                  </div>
-                </div>}
+                }
            
             
-        </div>
+            </div>
+             </>
     )
 }
 

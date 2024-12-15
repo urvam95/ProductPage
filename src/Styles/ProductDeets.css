@@ -1,0 +1,40 @@
+.product-details {
+  color: #333;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-rating {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #000;
+  margin: 1rem 0;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart button {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.cart-button {
+  background-color: #e10098;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
