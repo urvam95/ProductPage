@@ -1,5 +1,5 @@
 .product-details {
-  color: #333;
+  color: #524444;
 }
 
 .product-title {
@@ -14,24 +14,29 @@
 
 .product-price {
   font-size: 1.5rem;
-  color: #000;
+  color:#aa1f7e;
   margin: 1rem 0;
 }
 
 .add-to-cart {
-  display: flex;
-  align-items: center;
+  display:flow-root;
+  align-items:stretch;
+  padding: 0.5rem 1.5rem;
+    border:#e10098;
+
 }
 
 .add-to-cart button {
-  background-color: #eee;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
+
+ color:#e10098;
+  border:#e10098;
+  padding: 0.1rem 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.cart-button {
+.cart-button  {
   background-color: #e10098;
   color: #fff;
   border: none;

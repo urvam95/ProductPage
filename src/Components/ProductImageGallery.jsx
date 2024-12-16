@@ -11,8 +11,13 @@ function ProductImageGallery() {
     return (
         <div className="image-gallery">
             {product ? <div className="main-image">
-                <img src={product.thumbnail} />
+                <img src={product.images[0]} alt="Lash Princess Mascara"/>
             </div> : <div></div>}
+            {product ? <div className="image-thumbnails">
+                <img src={product.thumbnail} alt="Lash Princess Mascara" />
+                <img src={product.thumbnail} alt="Lash Princess Mascara" />
+                <img src={product.thumbnail} alt="Lash Princess Mascara"/>
+            </div>: <p>no</p>}
             
             
         </div>

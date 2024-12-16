@@ -1,10 +1,15 @@
 import { useContext } from "react"
 
 import APIContext from "../Context/ApiFetchContext"
-import "./ProductDetail.css"
+// import "./ProductDetail.css"
 import { Breadcrumb } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import ProductImageGallery from "./ProductImageGallery";
+import "../Styles/ProductPage.css"
+import ProductDeets from "./ProductDeets";
+import TabsSection from "./TabsSection";
+import ProductReview from "./ProductReview";
+
 
 function Products() {
     const { product, loading,error } = useContext(APIContext);
@@ -29,9 +34,21 @@ function Products() {
                 </Breadcrumb.Item>
 
                 </Breadcrumb>
+            </div>
+            <div className="product-page-container">
+                <ProductImageGallery />
+                <div className="product-content">
+                    <ProductDeets />
+                    <TabsSection />
+                     <ProductReview/>
+
                 </div>
+               
+
+            </div>
+            
        
-        <div className="product-detail">
+        {/* <div className="product-detail">
            
             {product ? (   
                 <div className="product-info">
@@ -49,7 +66,7 @@ function Products() {
                 }
            
             
-            </div>
+            </div> */}
              </>
     )
 }

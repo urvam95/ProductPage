@@ -65,8 +65,8 @@ color: #bf008c;
 
 .product-content {
   flex: 1;
-  padding: 20px;
-  background-color: #A835F2; /* Neon purple */
+  padding: 10px;
+  background-color: #ffffff; /* Neon purple */
   color: white;
 }
 body {
